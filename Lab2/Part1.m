@@ -1,4 +1,4 @@
-% Part2.m
+% Part1.m
 % Author: Charles Yang
 % Signal&System 1.6(a)
 t = sym("t");
