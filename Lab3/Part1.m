@@ -1,7 +1,7 @@
 % Part1.m
 % Author: Charles Yang
 % Signal&System 2.1(a)(b)(c)
-%% (a)(b)(c)
+%%
 x = ones(1,5);
 for i=1:5
     h(1,i) = i;

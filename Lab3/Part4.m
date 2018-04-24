@@ -54,4 +54,3 @@ function [y]=h2(x)
         end
     end
 end
-    
