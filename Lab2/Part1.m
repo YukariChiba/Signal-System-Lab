@@ -4,4 +4,4 @@
 t = sym("t");
 T = 5;
 f = sin((2*pi*t)/T);
-fplot(f);
+fplot(f);xlabel("t");ylabel("f(t)")
