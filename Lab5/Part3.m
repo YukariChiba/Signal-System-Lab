@@ -2,7 +2,7 @@
 % Author: Charles Yang
 % Signal&System 3.5 (d)(e)(f)(h)
 %% (d)
-x1 = ones(1,8);               +++++++
+x1 = ones(1,8);
 nx1 = 0:length(x1)-1;
 x2 = [ones(1,8) zeros(1,8)];
 nx2 = 0:length(x2)-1;
