@@ -32,4 +32,4 @@ Y3=1*exp(1j*angle(Y));
 y3=ifft(fftshift(Y3));
 subplot(211);plot(w1,angle(Y));sound(y,fs);
 pause(2);
-subplot(212);plot(w1,angle(y3));sound(y3,fs);
+subplot(212);plot(w1,angle(y3));sound(abs(y3),fs);

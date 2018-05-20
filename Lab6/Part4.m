@@ -3,7 +3,6 @@
 % Signal&System 4.6 (a)(b)(c)(d)
 %% (a)(b)
 load ctftmod.mat
-whos
 fprintf('f1 = %d f2 = %d\n', f1, f2);
 z=[dash dash dot dot];
 figure(1)
@@ -20,8 +19,6 @@ title('dot');
 subplot(gr,1,4)
 plot(t,z);
 title('created signal z');
-figure(2)
-freqs(bf,af)
 %% (c)
 load ctftmod.mat
 fprintf('f1 = %d f2 = %d\n', f1, f2);
@@ -41,25 +38,16 @@ title('filtered dash');
 subplot(gr,1,4)
 plot(t(1:length(dot)),ydot);
 title('filtered dot');
-figure(2)
-freqs(bf,af)
 %% (d)
 load ctftmod.mat
 fprintf('f1 = %d f2 = %d\n', f1, f2);
-y=
+y=dash .* cos(2*pi*f1*t(1:length(dash)));
+yo=lsim(bf, af, y, t(1:length(y)));
 figure(1)
-gr=4;
+gr=2;
 subplot(gr,1,1)
-plot(t(1:length(dash)),dash);
-title('dash');
+plot(t(1:length(y)),y);
+title('y');
 subplot(gr,1,2)
-plot(t(1:length(dot)),dot);
-title('dot');
-subplot(gr,1,3)
-plot(t(1:length(dash)),ydash);
-title('filtered dash');
-subplot(gr,1,4)
-plot(t(1:length(dot)),ydot);
-title('filtered dot');
-figure(2)
-freqs(bf,af)
+plot(t(1:length(yo)),yo);
+title('yo');
